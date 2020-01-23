@@ -16,7 +16,7 @@ beforeAll(async () => {
     await driver.sleep(20000); // wait for app to load
 });
 
-test('appium renders', async () => {
+test('Check whether the error message shows up when there is no network connection on login page.', async () => {
     let emailId = await driver.elementByXPath(
         '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]/android.view.View/android.view.View/android.widget.EditText'
     );
@@ -25,5 +25,7 @@ test('appium renders', async () => {
     let password = await driver.elementByXPath('//*[@text="Password"]');
     await password.type('Tester@1234567890');
     await driver.elementByXPath('//*[@text="Log In"]').click();
-    
+    await driver.elementByXPath(
+        '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[1]/android.view.View'
+    );
 });
