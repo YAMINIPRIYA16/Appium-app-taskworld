@@ -1,0 +1,26 @@
+{
+    "name": "functional_tests",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "appium-chromedriver": "^4.20.1",
+        "jest": "^24.9.0",
+        "wd": "^1.11.4"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "babel-jest": "^24.9.0",
+        "metro-react-native-babel-preset": "^0.57.0"
+    },
+    "bundledDependencies": [
+        "jest",
+        "wd"
+    ]
+}
